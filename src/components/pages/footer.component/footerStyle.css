@@ -1,0 +1,15 @@
+.footer {
+  text-align: center;
+  border: 3px solid whitesmoke;
+  height: 110px;
+}
+
+.footer p {
+  text-align: center;
+  margin: 40px;
+}
+
+#kiss {
+  color: green;
+  margin: 0 5px;
+}
