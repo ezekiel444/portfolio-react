@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap');
+
+
+
+*,
+link {
+
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+.nav-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'El Messiri', sans-serif;
+    background-color: #FFFFFF;
+}
+
+.nav-logo {
+    width: 100px;
+    border-radius: 10% / 50%;
+    padding-top: 1em;
+}
+
+.nav-properties {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nav-ul {
+    display: flex;
+    width: 100%;
+}
+
+.nav-li {
+    padding: 0.5em;
+    font-size: 1.3em;
+}
+
+@media (max-width:700px) {
+    .nav-home {
+        flex-direction: column;
+    }
+
+    .nav-properties {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:474px) {
+    .nav-home {
+        width: 100vw;
+
+    }
+
+    .nav-properties {
+        width: 90vw;
+        background-color: red;
+    }
+
+    .nav-ul {
+        display: flex;
+        justify-content: center;
+        background-color: seagreen;
+    }
+
+    .nav-li {
+        width: 10vw;
+        background-color: slategray;
+
+
+    }
+
+}

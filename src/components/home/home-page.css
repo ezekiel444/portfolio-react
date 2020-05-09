@@ -1,0 +1,65 @@
+:root {
+    --background-red: rgb(250, 88, 88);
+    --background-gray: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+
+}
+
+.home-page {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+    background-color: #E5E4DF;
+    overflow: hidden;
+}
+
+.profile-img-container {
+    width: 90%;
+    margin: 20px 0px 0px 0px
+}
+
+/* .profile-img-container img {} */
+
+.about-my-profile {
+    display: flex;
+    flex-direction: column;
+    padding: 8em 0 0 2em;
+    line-height: 5em;
+}
+
+h3 {
+    font-size: 17px;
+    font-family: system-ui;
+    color: rgb(224, 102, 102)
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.about-my-profile p {
+    line-height: 2;
+}
+
+
+.learn-hire-button {
+    display: flex;
+}
+
+.general-button {
+    border-radius: 20%;
+    padding: 20px 40px;
+    margin: 30px 10px;
+    font-weight: bold;
+    font-size: .9em;
+}
+
+.learn {
+    background-color: var(--background-red);
+}
+
+
+.hire {
+
+    background-color: var(--background-gray);
+    color: rgb(42, 40, 40);
+}
