@@ -1,6 +1,11 @@
 import React from "react";
 import "./App.css";
-import { NavBar, HomePage } from "./components/HomeOfComponents";
+import {
+  NavBar,
+  HomePage,
+  Service,
+  Contact,
+} from "./components/HomeOfComponents";
 
 function App() {
   return (
@@ -10,6 +15,8 @@ function App() {
         <hr />
       </header>
       <HomePage />
+      <Service />
+      <Contact />
     </>
   );
 }

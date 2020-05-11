@@ -1,0 +1,54 @@
+.serviceHome {
+    height: 100vh;
+    display: flex;
+}
+
+.serviceDesign {
+    width: 50%;
+}
+
+.serviceDesign h1 {
+    font-size: 35px;
+    margin: 0 20px;
+    margin-top: 150px;
+}
+
+.serviceDesign p {
+    margin: 0 20px;
+    line-height: 1.7;
+    margin-top: 25px;
+}
+
+.serviceContact {
+    width: 50%;
+
+}
+
+
+.serviceContact section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10.1em 1.5em 0 1.5em;
+    line-height: 1
+}
+
+.serviceContact section span {
+    margin-top: 2em;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(138, 123, 123);
+}
+
+.serviceContact section h2 {
+    margin-right: auto;
+    margin-top: 1em;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.serviceContact section h2 span {
+    padding: 20px;
+    font-size: 1.3em;
+}
