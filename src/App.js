@@ -5,6 +5,7 @@ import {
   HomePage,
   Service,
   Contact,
+  Portfolio,
 } from "./components/HomeOfComponents";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <HomePage />
       <Service />
       <Contact />
+      <Portfolio />
     </>
   );
 }
