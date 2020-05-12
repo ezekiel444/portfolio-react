@@ -1,5 +1,6 @@
 import React from "react";
 import "./contactStyle.css";
+import Signature from "../../image/signature.png";
 
 export default function contact() {
   return (
@@ -7,19 +8,25 @@ export default function contact() {
       <section className="contactStyle">
         <div className="contact-now">
           <h1>If Not Now, When? Let’s Work Together!</h1>
+          <br />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem,
             mollitia earum.
           </p>
-          <img src="//#endregion" alt="sign" />
+          <br />
+          <div className="signature">
+            <img src={Signature} alt="sign" />
+          </div>
         </div>
         <div className="contact-message">
-          <form action="#">
-            <input placeholder="fullname" type="text" name="" id="" />
-            <input placeholder="email" name="email" type="text" />
-            <input placeholder="your message" type="text" />
-            <button type="submit">Send Message</button>
-          </form>
+          <input placeholder="Fullname" type="text" name="name" id="" />
+          <input placeholder="Email" name="email" type="text" />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            id="message"
+          ></textarea>
+          <button type="submit">Send Message</button>
         </div>
       </section>
     </>
