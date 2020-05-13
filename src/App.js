@@ -11,7 +11,7 @@ import {
 function App() {
   return (
     <>
-      <header>
+      <header className="header-sticky">
         <NavBar />
         <hr />
       </header>

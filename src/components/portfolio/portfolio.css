@@ -1,6 +1,26 @@
-.portfolio {
-    height: 100vh;
-    background-color: rgb(7, 5, 24);
-    color: #ffff;
+footer {
+    height: 80vh;
+    background: #0F0029;
+    color: #fff;
+}
 
+.footer-address {
+
+    height: 40vh;
+    text-align: center;
+    padding-top: 50px;
+    line-height: 1.5;
+}
+
+.footer-address h4 {
+    opacity: 0.2
+}
+
+.footer-right {
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 60px;
+    opacity: 0.3;
 }

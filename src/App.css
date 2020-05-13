@@ -13,6 +13,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.header-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
 h1,
 h2 {
     font-family: 'Libre Baskerville', serif;
@@ -20,5 +26,4 @@ h2 {
 
 img {
     width: 100%;
-
 }
