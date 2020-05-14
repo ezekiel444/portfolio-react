@@ -1,0 +1,9 @@
+.scrollTop {
+    font-size: 5em;
+    margin-left: 13em;
+}
+
+.scrollTop :hover {
+    color: crimson;
+    transition: all 0.4s ease-out;
+}

@@ -2,11 +2,13 @@ import React from "react";
 import "./App.css";
 import {
   NavBar,
-  HomePage,
   Service,
   Contact,
   Portfolio,
+  TiArrowUpThick,
+  AboutMe,
 } from "./components/HomeOfComponents";
+import "./components/scrollup.css";
 
 function App() {
   return (
@@ -15,10 +17,14 @@ function App() {
         <NavBar />
         <hr />
       </header>
-      <HomePage />
+      <AboutMe />
       <Service />
       <Contact />
       <Portfolio />
+      <TiArrowUpThick
+        className="scrollTop"
+        onClick={() => window.scrollTo(0, 0)}
+      ></TiArrowUpThick>
     </>
   );
 }

@@ -1,7 +1,8 @@
 import NavBar from "./NavigationBar/NavBar";
-import HomePage from "./home/HomePage";
+import AboutMe from "./aboutme/About-me";
 import Service from "./service/servicePackage/Service";
 import Contact from "./contact/Contact";
-import Portfolio from "./portfolio/Footer-Portfolio";
+import Portfolio from "./footer-portfolio/Footer-Portfolio";
+import { TiArrowUpThick } from "react-icons/ti";
 
-export { HomePage, NavBar, Service, Contact, Portfolio };
+export { AboutMe, NavBar, Service, Contact, Portfolio, TiArrowUpThick };

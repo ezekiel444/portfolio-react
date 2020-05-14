@@ -1,8 +1,8 @@
 import React from "react";
-import "./home-page.css";
+import "./about-me-page.css";
 import profileLogo from "../../image/myProfile.jpg";
 
-const HomePage = () => {
+const AboutMe = () => {
   return (
     <div className="home-page">
       <div className="profile-img-container">
@@ -27,4 +27,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default AboutMe;
