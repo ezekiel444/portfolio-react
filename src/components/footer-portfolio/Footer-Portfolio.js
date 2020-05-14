@@ -14,7 +14,7 @@ const logos = socialLogo.map((logo) => (
   </Fragment>
 ));
 
-export default function Portfolio() {
+export default function Footer() {
   return (
     <footer>
       <div className="footer-address">

@@ -4,23 +4,30 @@ import {
   NavBar,
   Service,
   Contact,
-  Portfolio,
+  Footer,
   TiArrowUpThick,
   AboutMe,
+  HomePage,
 } from "./components/HomeOfComponents";
 import "./components/scrollup.css";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <>
       <header className="header-sticky">
         <NavBar />
-        <hr />
       </header>
-      <AboutMe />
-      <Service />
-      <Contact />
-      <Portfolio />
+      <hr />
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/about" component={AboutMe} />
+        <Route path="/service" component={Service} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+      <Footer />
+
+      {/* scroll-up arrow */}
       <TiArrowUpThick
         className="scrollTop"
         onClick={() => window.scrollTo(0, 0)}

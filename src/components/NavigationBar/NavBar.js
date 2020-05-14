@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 // FiX;
 
 const NavData = [
-  { nav: "Home", path: "/home" },
+  { nav: "Home", path: "/" },
   { nav: "About", path: "/about" },
   { nav: "Service", path: "/service" },
   { nav: "Portfoglio", path: "/portfoglio" },
@@ -17,7 +17,7 @@ const NavData = [
 ];
 
 const links = NavData.map((link) => (
-  <NavLink className="hoverEffect" to={`/${link.path}`}>
+  <NavLink key={Math.random()} className="hoverEffect" to={`${link.path}`}>
     <li className="nav-li">{link.nav}</li>
   </NavLink>
 ));
