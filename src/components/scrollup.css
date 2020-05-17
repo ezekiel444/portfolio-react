@@ -1,6 +1,8 @@
 .scrollTop {
-    font-size: 5em;
-    margin-left: 13em;
+    position: absolute;
+    top: -1;
+    right: 0;
+    font-size: 6em;
 }
 
 .scrollTop :hover {

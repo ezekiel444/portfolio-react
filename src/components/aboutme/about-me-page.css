@@ -1,9 +1,3 @@
-:root {
-    --background-red: rgb(250, 88, 88);
-    --background-gray: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-
-}
-
 .home-page {
     display: flex;
     flex-direction: row-reverse;
@@ -17,7 +11,7 @@
     margin: 20px 0px 0px 0px
 }
 
-/* .profile-img-container img {} */
+
 
 .about-my-profile {
     display: flex;
@@ -54,12 +48,12 @@ h1 {
 }
 
 .learn {
-    background-color: var(--background-red);
+    background-color: rgb(250, 88, 88);
 }
 
 
 .hire {
 
-    background-color: var(--background-gray);
+    background-color: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
     color: rgb(42, 40, 40);
 }

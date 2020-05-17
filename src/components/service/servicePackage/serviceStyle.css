@@ -4,7 +4,7 @@
 }
 
 .serviceDesign {
-    width: 50%;
+    margin-left: auto;
 }
 
 .serviceDesign h1 {
@@ -20,7 +20,7 @@
 }
 
 .serviceContact {
-    width: 50%;
+    margin-right: auto;
 
 }
 
@@ -41,14 +41,18 @@
     color: rgb(138, 123, 123);
 }
 
-.serviceContact section h2 {
-    margin-right: auto;
-    margin-top: 1em;
-    text-decoration: underline;
+.serviceContact div {
     text-align: center;
+    font-weight: bold
 }
 
-.serviceContact section h2 span {
+/* .serviceContact section h2 {
+    margin-right: auto;
+    text-decoration: underline;
+    text-align: center;
+} */
+
+/* .serviceContact section h2 span {
     padding: 20px;
     font-size: 1.3em;
-}
+} */

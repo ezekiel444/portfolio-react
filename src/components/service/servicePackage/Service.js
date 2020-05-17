@@ -25,9 +25,10 @@ function Service() {
         <section>
           <h1>Any Type Of Query & Discussion.</h1>
           <span>Late talk with me</span>
-          <h2>
-            hire@ezekielmatomi588@gmail.com <MdArrowForward />
-          </h2>
+          <h4>
+            hire@ezekielmatomi588@gmail.com
+            <MdArrowForward />
+          </h4>
         </section>
       </div>
     </div>

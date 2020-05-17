@@ -1,53 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap');
 
-*,
-link {
 
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-}
+
 
 .nav-home {
+    width: max(100px, 100%);
+    font-family: 'El Messiri', sans-serif;
+    background-color: #FFFFFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'El Messiri', sans-serif;
-    background-color: #FFFFFF;
+    font-size: calc(0.75em + 1vmin);
 }
 
 .nav-logo {
-    width: 100px;
-    border-radius: 10% / 50%;
-    padding-top: 1em;
+    width: 90px;
 }
 
-.nav-properties {
+.nav-computer {
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
-}
-
-.nav-ul {
-    display: flex;
-    width: 100%;
 }
 
 .nav-li {
-    padding: 0.5em;
-    font-size: 1.3em;
+    padding: 1.4em;
 }
 
 .hoverEffect :hover {
-    box-shadow: 3px 3px rgba(0, 98, 90, 0.4),
-        8px 8px rgba(0, 98, 90, 0.3),
-        12px 12px rgba(0, 98, 90, 0.2),
-        17px 17px rgba(0, 98, 90, 0.1),
-        23px 23px rgba(0, 98, 90, 0.05);
+    box-shadow: 1px 1px rgba(0, 98, 90, 0.4),
+        3px 3px rgba(0, 98, 90, 0.3),
+        5px 5px rgba(0, 98, 90, 0.2),
+        10px 10px rgba(0, 98, 90, 0.1),
+        10px 10px rgba(0, 98, 90, 0.05);
     transition: box-shadow .6s ease-in-out;
 }
 
-@media(max-width:900px) {
-    .nav-properties {
-        background-color: red;
+.toggleNavBar {
+    display: none
+}
+
+.nav-mobile {
+    display: none;
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 900px) {
+    body {
+        position: relative;
+        width: 100vw;
+        overflow: hidden;
     }
+
+    a,
+    link {
+        color: #fff;
+        font-size: xx-large;
+    }
+
+    .nav-computer {
+        display: none;
+    }
+
+    .toggleNavBar {
+        display: block;
+        font-size: 5em;
+        position: relative;
+        top: 30px;
+    }
+
+    .nav-mobile {
+        display: block;
+        position: absolute;
+        top: 120px;
+        right: 0;
+        left: 50vw;
+        text-align: center;
+        background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+            linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+            linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+            linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+            linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+            linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+        background-color: #131313;
+        background-size: 20px 20px;
+
+    }
+
 }
