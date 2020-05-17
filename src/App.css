@@ -23,9 +23,19 @@ body {
     top: 0;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 900px) {
+    .header-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+}
+
 h1,
 h2 {
     font-family: 'Libre Baskerville', serif;
+    font-size: calc(0.75em + 1vmin);
 }
 
 img {
