@@ -22,7 +22,7 @@ export default function Footer() {
           <FiTarget />
           Portfolio
         </h2>
-        <h2>ezekielmatomi588@gmail.com</h2>
+        <h3>ezekielmatomi588@gmail.com</h3>
         <h4>my house address #####</h4>
       </div>
       <section className="footer-right">

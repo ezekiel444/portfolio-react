@@ -1,58 +1,45 @@
 .serviceHome {
-    height: 100vh;
+    height: 50vh;
     display: flex;
+    width: 100%;
 }
 
 .serviceDesign {
-    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
 }
 
-.serviceDesign h1 {
-    font-size: 35px;
-    margin: 0 20px;
-    margin-top: 150px;
-}
-
-.serviceDesign p {
-    margin: 0 20px;
-    line-height: 1.7;
-    margin-top: 25px;
-}
 
 .serviceContact {
-    margin-right: auto;
-
+    height: 25vh;
+    width: 50vw;
 }
+
+.serviceContact span {
+    font-size: 1.5em;
+}
+
 
 
 .serviceContact section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10.1em 1.5em 0 1.5em;
-    line-height: 1
-}
-
-.serviceContact section span {
-    margin-top: 2em;
-    margin-right: auto;
-    font-weight: bold;
-    font-size: 20px;
-    color: rgb(138, 123, 123);
-}
-
-.serviceContact div {
     text-align: center;
-    font-weight: bold
+
 }
 
-/* .serviceContact section h2 {
-    margin-right: auto;
-    text-decoration: underline;
-    text-align: center;
-} */
+@media (max-width:900px) {
+    .serviceContact span {
+        font-size: .7em;
+    }
 
-/* .serviceContact section h2 span {
-    padding: 20px;
-    font-size: 1.3em;
-} */
+    .serviceDesign {
+        display: flex;
+        flex-direction: column;
+        font-size: .9em;
+    }
+
+
+}

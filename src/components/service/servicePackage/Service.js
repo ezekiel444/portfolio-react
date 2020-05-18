@@ -8,27 +8,28 @@ function Service() {
   return (
     <div className="serviceHome">
       <div className="serviceDesign">
-        <h1>Designing With Passion While Exploring The World.</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, totam
-          esse. Quo dicta rerum fugiat nobis distinctio consequatur eveniet,
-          adipisci unde qui odit dolore, modi velit inventore soluta. Saepe,
-          beatae.
-        </p>
-        <br />
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
-          dolores consectetur cupiditate?
-        </p>
+        <div>
+          <h2>Designing With Passion While Exploring The World.</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing eveniet,
+            adipisci unde qui odit dolore, modi velit inventore soluta. Saepe,
+            beatae.
+          </p>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
+            dolores consectetur cupiditate?
+          </p>
+        </div>
       </div>
       <div className="serviceContact">
         <section>
-          <h1>Any Type Of Query & Discussion.</h1>
-          <span>Late talk with me</span>
-          <h4>
-            hire@ezekielmatomi588@gmail.com
-            <MdArrowForward />
-          </h4>
+          <h2>Any Type Of Query & Discussion.</h2>
+          <h3>Late talk with me</h3>
+          <span>
+            hire@ezekielmatomi588@gmail.com <MdArrowForward />
+          </span>
         </section>
       </div>
     </div>

@@ -16,7 +16,7 @@
 }
 
 .signature {
-    width: 20em;
+    width: 16em;
 }
 
 .contact-message {
@@ -35,4 +35,11 @@ button {
     border-radius: 30px;
     text-align: center;
     font-size: 1.5em;
+}
+
+
+@media (max-width:900px) {
+    .signature {
+        width: 10em;
+    }
 }

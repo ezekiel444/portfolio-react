@@ -7,7 +7,7 @@ export default function contact() {
     <>
       <section className="contactStyle">
         <div className="contact-now">
-          <h1>If Not Now, When? Let’s Work Together!</h1>
+          <h2>If Not Now, When? Let’s Work Together!</h2>
           <br />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem,

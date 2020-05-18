@@ -16,7 +16,7 @@ footer {
 }
 
 .footer-right {
-    height: 40vh;
+    height: 40%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -25,7 +25,6 @@ footer {
 }
 
 .footer-icon {
-    line-height: 2;
     color: #fff;
 }
 
@@ -41,10 +40,5 @@ footer {
 .footer-icon :nth-child(2) {
     padding-right: 10px;
     color: rgba(255, 255, 255, 1);
-    font-size: 2em;
-}
 
-.footer-icon :nth-child(2):hover {
-    color: rgba(255, 255, 255, 1);
-    transition: all .5s ease-in-out;
 }

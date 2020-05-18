@@ -35,7 +35,6 @@ body {
 h1,
 h2 {
     font-family: 'Libre Baskerville', serif;
-    font-size: calc(0.75em + 1vmin);
 }
 
 img {
