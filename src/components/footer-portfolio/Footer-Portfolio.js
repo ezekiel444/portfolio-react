@@ -1,17 +1,19 @@
-import React, { Fragment } from "react";
+import React,{Fragment}  from "react";
+import {Link} from "react-router-dom"
 import "./portfolio.css";
 import { FiTarget, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 const socialLogo = [
-  { icon: FiTwitter },
-  { icon: FiInstagram },
-  { icon: FiLinkedin },
+  { icon: FiTwitter , label: "Twitter"},
+  { icon: FiInstagram, label: "Instagram" },
+  { icon: FiLinkedin , label : "Linkedin" },
 ];
 
 const logos = socialLogo.map((logo) => (
-  <Fragment key={Math.random()}>
-    <logo.icon />
-  </Fragment>
+ 
+  <Fragment   key={Math.random()}>
+ <Link to="#"><div className="logoContainer"><logo.icon className="eachLogo"></logo.icon><span className="labelAttribute">{logo.label}</span></div> </Link>
+ </Fragment>
 ));
 
 export default function Footer() {
@@ -23,16 +25,16 @@ export default function Footer() {
           Portfolio
         </h2>
         <h3>ezekielmatomi588@gmail.com</h3>
-        <h4>my house address #####</h4>
+        <h4> Grenoble France</h4>
       </div>
       <section className="footer-right">
         <p>
           Copyright ©{new Date().getFullYear()} All rights reserved | By Ezekiel
-          Matomi Lucky (eml)
+          Matomi Lucky.
         </p>
         <div className="footer-icon">
           <h2>Stay Connected</h2>
-          <p> {logos}</p>
+         {logos}
         </div>
       </section>
     </footer>

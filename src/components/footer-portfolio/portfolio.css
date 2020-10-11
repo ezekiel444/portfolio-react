@@ -24,11 +24,11 @@ footer {
     opacity: 0.3;
 }
 
-.footer-icon {
+/* .footer-icon {
     color: #fff;
-}
+} */
 
-.footer-icon :nth-child(1) {
+/* .footer-icon :nth-child(1) {
     opacity: .4;
 }
 
@@ -37,8 +37,34 @@ footer {
     transition: all .5s ease-in-out;
 }
 
+
 .footer-icon :nth-child(2) {
     padding-right: 10px;
     color: rgba(255, 255, 255, 1);
 
+} */
+
+.logoContainer{height: 50px;
+border-radius: 20px;
+box-shadow:  inset 0 -3em 3em rgba(248, 248, 255, 0.1), 
+0 0  0 2px rgb(255, 255, 255),
+0.3em 0.3em 1em rgba(252, 252, 252, 0.3);;
+opacity: 0.4;
 }
+
+.logoContainer:hover{
+    opacity: 1;
+    transition: all 0.8s;
+}
+
+
+.eachLogo{height: 40px;
+width: 40px;
+}
+
+.labelAttribute{
+    font-size: 22px;
+    margin: 10px;
+}
+
+

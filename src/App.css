@@ -17,6 +17,19 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+input, textarea{
+   background-color: black; 
+   color: blanchedalmond;
+}
+
+input:focus, textarea:focus{
+    background-color: rgb(255, 255, 255); 
+    color: black;
+    outline: none;
+ }
+
+
+
 .header-sticky {
     position: -webkit-sticky;
     position: sticky;
