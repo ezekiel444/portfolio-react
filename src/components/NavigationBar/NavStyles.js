@@ -1,69 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap');
+import styled from 'styled-components'
 
 
-
-
-.nav-home {
+const NavHome = styled.div`
     width: max(100px, 100%);
     font-family: 'El Messiri', sans-serif;
-    background-color: #FFFFFF;
+    background-color: ${(props=>props.theme.white)};
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: calc(0.75em + 1vmin);
-}
 
-.nav-logo {
-    width: 90px;
-}
-
-.nav-computer {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.nav-li {
+    .nav-li {
     padding: 1.4em;
-}
+    display:inline-block
+    };
 
-.hoverEffect :hover {
-    box-shadow: 1px 1px rgba(0, 98, 90, 0.4),
-        3px 3px rgba(0, 98, 90, 0.3),
-        5px 5px rgba(0, 98, 90, 0.2),
-        10px 10px rgba(0, 98, 90, 0.1),
-        10px 10px rgba(0, 98, 90, 0.05);
-    transition: box-shadow .6s ease-in-out;
-}
-
-.toggleNavBar {
+    .toggleNavBar {
     display: none
 }
 
 .nav-mobile {
     display: none;
+    };
+
+.hoverEffect :hover {
+    color:white;
+    border-radius:50px;
+   background-color:black;
+   text-align:center
 }
 
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 900px) {
-    body {
-        position: relative;
-        width: 100%;
-    }
-
-
-
-    a,
+    /* a,
     link {
         color: #fff;
         font-size: xx-large;
-    }
-
-    .nav-computer {
-        display: none;
-    }
+    } */
 
     .toggleNavBar {
         display: block;
@@ -90,3 +65,23 @@
     }
 
 }
+`
+
+const NavLogo = styled.div`
+ width: 90px;
+`
+
+const NavSearch = styled.div`
+input{
+     border-radius: 300px;
+     width: 5em;
+     height: 2em;
+     text-align: center;
+     font-size: 1em;
+     font-weight: bolder;
+     margin-top: .5em;
+}
+`
+
+
+export{NavHome, NavLogo, NavSearch}

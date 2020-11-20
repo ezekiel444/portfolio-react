@@ -1,4 +1,5 @@
 import React from "react";
+import GlobalFonts from './fonts/fonts';
 import "./App.css";
 import {
   NavBar,
@@ -12,9 +13,11 @@ import {
 import "./components/scrollup.css";
 import { Route, Switch } from "react-router-dom";
 
+
 function App() {
   return (
     <>
+      <GlobalFonts/>
       <header className="header-sticky">
         <NavBar />
       </header>

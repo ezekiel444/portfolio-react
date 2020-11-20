@@ -1,7 +1,6 @@
 import React, { useState } from "react";
+import * as Styles from './NavStyles'
 import Logo from "../../image/eml-logo.png";
-import "./nav-bar.css";
-import NavSearch from "./nav-search/NavSearch";
 import { NavLink } from "react-router-dom";
 import { FiAlignLeft } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
@@ -14,6 +13,9 @@ const NavData = [
   { nav: "Page", path: "/page" },
   { nav: "Contact", path: "/contact" },
 ];
+
+
+
 
 const links = NavData.map((link) => (
   <NavLink key={Math.random()} className="hoverEffect" to={`${link.path}`}>
@@ -29,13 +31,15 @@ const NavBar = () => {
   };
 
   return (
-    <div className="nav-home">
+    <Styles.NavHome>
       <NavLink to="/">
-        <div className="nav-logo">
-          <img className="eml-logo" src={Logo} alt="nav logo" />
-        </div>
+        <Styles.NavLogo>
+          <img src={Logo} alt="nav logo" />
+        </Styles.NavLogo>
       </NavLink>
-      <NavSearch className="navSearch" />
+      <Styles.NavSearch >
+      <input placeholder="search" type="text" />
+    </Styles.NavSearch>
       {navButton ? (
         <div className="nav-mobile">{links}</div>
       ) : (
@@ -44,7 +48,7 @@ const NavBar = () => {
       <span className="toggleNavBar" onClick={open}>
         {navButton ? <FiX /> : <FiAlignLeft />}
       </span>
-    </div>
+    </Styles.NavHome>
   );
 };
 
