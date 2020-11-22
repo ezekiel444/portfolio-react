@@ -1,6 +1,5 @@
 import React from "react";
 import GlobalFonts from './fonts/fonts';
-import "./App.css";
 import {
   NavBar,
   Service,
@@ -10,8 +9,8 @@ import {
   AboutMe,
   HomePage,
 } from "./components/HomeOfComponents";
-import "./components/scrollup.css";
 import { Route, Switch } from "react-router-dom";
+
 
 
 function App() {

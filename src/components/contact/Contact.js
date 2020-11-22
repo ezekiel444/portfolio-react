@@ -1,11 +1,11 @@
 import React from "react";
-import "./contactStyle.css";
+import ContactStyle from './contactStyle'
 import Signature from "../../image/signature.png";
 
 export default function contact() {
   return (
     <>
-      <section className="contactStyle">
+      <ContactStyle className="contactStyle">
         <div className="contact-now">
           <h2>If Not Now, When? Let’s Work Together!</h2>
           <br />
@@ -28,7 +28,7 @@ export default function contact() {
           ></textarea>
           <button type="submit">Send Message</button>
         </div>
-      </section>
+      </ContactStyle>
     </>
   );
 }

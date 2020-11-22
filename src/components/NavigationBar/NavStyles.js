@@ -34,11 +34,6 @@ const NavHome = styled.div`
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 900px) {
-    /* a,
-    link {
-        color: #fff;
-        font-size: xx-large;
-    } */
 
     .toggleNavBar {
         display: block;
@@ -73,7 +68,7 @@ const NavLogo = styled.div`
 
 const NavSearch = styled.div`
 input{
-     border-radius: 300px;
+     border-radius: 25%;
      width: 5em;
      height: 2em;
      text-align: center;

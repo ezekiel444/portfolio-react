@@ -1,12 +1,12 @@
 import React from "react";
-import "./serviceStyle.css";
+import ServiceHome from "./ServiceStyle"
 import { MdArrowForward } from "react-icons/md";
 import ExpectedService from "../HousingServices";
 import ExtraService from "../extraservice/ExtraService";
 
 function Service() {
   return (
-    <div className="serviceHome">
+    <ServiceHome>
       <div className="serviceDesign">
         <div>
           <h2>Designing With Passion While Exploring The World.</h2>
@@ -32,7 +32,7 @@ function Service() {
           </span>
         </section>
       </div>
-    </div>
+    </ServiceHome>
   );
 }
 

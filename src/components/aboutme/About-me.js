@@ -1,10 +1,10 @@
 import React from "react";
-import "./about-me-page.css";
 import profileLogo from "../../image/myProfile.jpg";
+import {AboutButton, HomePage} from './aboutStyle'
 
 const AboutMe = () => {
   return (
-    <div className="home-page">
+    <HomePage>
       <div className="profile-img-container">
         <img src={profileLogo} alt="profile picx" />
       </div>
@@ -19,11 +19,11 @@ const AboutMe = () => {
           numquam nulla est. Odio a nulla numquam? Quas, facilis ab.
         </p>
         <div className="learn-hire-button">
-          <button className="general-button learn">Learn</button>
-          <button className="general-button hire">Hire Me</button>
+          <AboutButton color>Learn</AboutButton >
+          <AboutButton >Hire Me</AboutButton >
         </div>
       </div>
-    </div>
+    </HomePage>
   );
 };
 

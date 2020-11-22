@@ -1,7 +1,8 @@
-.contactStyle {
+import styled from 'styled-components'
+
+const ContactStyle = styled.section`
     display: flex;
     height: 70vh;
-}
 
 .contact-now {
     width: 50%;
@@ -43,3 +44,7 @@ button {
         width: 10em;
     }
 }
+
+`
+
+export default ContactStyle;

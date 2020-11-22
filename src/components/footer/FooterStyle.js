@@ -1,8 +1,9 @@
-footer {
+import styled from 'styled-components'
+
+const FooterStyle = styled.footer` 
     height: 80vh;
     background: #0F0029;
     color: #fff;
-}
 
 .footer-address {
     height: 40vh;
@@ -23,26 +24,6 @@ footer {
     padding-bottom: 60px;
     opacity: 0.3;
 }
-
-/* .footer-icon {
-    color: #fff;
-} */
-
-/* .footer-icon :nth-child(1) {
-    opacity: .4;
-}
-
-.footer-icon :nth-child(1):hover {
-    opacity: 1;
-    transition: all .5s ease-in-out;
-}
-
-
-.footer-icon :nth-child(2) {
-    padding-right: 10px;
-    color: rgba(255, 255, 255, 1);
-
-} */
 
 .logoContainer{height: 50px;
 border-radius: 20px;
@@ -68,5 +49,6 @@ width: 20%;
     font-size: 22px;
     margin: 10px;
 }
+`
 
-
+export default FooterStyle

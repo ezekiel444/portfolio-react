@@ -1,17 +1,18 @@
-.home-page {
-    display: flex;
+import styled from "styled-components"
+
+
+const HomePage = styled.div`
+ display: flex;
     flex-direction: row-reverse;
     height: 100vh;
     background-color: #E5E4DF;
     overflow: hidden;
-}
 
-.profile-img-container {
+
+    .profile-img-container {
     width: 90rem;
     margin: 20px 0px 0px 0px
 }
-
-
 
 .about-my-profile {
     display: flex;
@@ -38,22 +39,20 @@ h1 {
 .learn-hire-button {
     display: flex;
 }
+`
 
-.general-button {
-    border-radius: 20%;
+const AboutButton = styled.button` 
+    border-radius: 30%;
     padding: 20px 40px;
     margin: 30px 10px;
     font-weight: bold;
-    font-size: .9em;
-}
+    font-size: 1em;
+    text-align:center;
+    background-color:${(props)=>props.color ? `${props.theme.black}` : `${props.theme.teal}`};
+    color: ${(props)=>props.theme.white};
+`
+   
 
-.learn {
-    background-color: rgb(250, 88, 88);
-}
 
 
-.hire {
-
-    background-color: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-    color: rgb(42, 40, 40);
-}
+export{HomePage, AboutButton}

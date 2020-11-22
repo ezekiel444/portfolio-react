@@ -1,8 +1,10 @@
-.serviceHome {
+import styled from 'styled-components'
+
+const ServiceHome = styled.div`
     height: 50vh;
     display: flex;
     width: 100%;
-}
+
 
 .serviceDesign {
     display: flex;
@@ -43,3 +45,7 @@
 
 
 }
+
+`
+
+export default ServiceHome

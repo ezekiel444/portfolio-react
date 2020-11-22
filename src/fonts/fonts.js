@@ -1,5 +1,8 @@
 import {createGlobalStyle} from 'styled-components'
 
+// font author credit:
+// <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
+
 export default createGlobalStyle`
     @font-face{
         font-family: 'Font Name';

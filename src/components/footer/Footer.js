@@ -1,6 +1,6 @@
 import React,{Fragment}  from "react";
 import {Link} from "react-router-dom"
-import "./portfolio.css";
+import FooterStyle from './FooterStyle'
 import { FiTarget, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 const socialLogo = [
@@ -16,9 +16,10 @@ const logos = socialLogo.map((logo) => (
  </Fragment>
 ));
 
+
 export default function Footer() {
   return (
-    <footer>
+    <FooterStyle>
       <div className="footer-address">
         <h2>
           <FiTarget />
@@ -37,6 +38,6 @@ export default function Footer() {
          {logos}
         </div>
       </section>
-    </footer>
+    </FooterStyle>
   );
 }

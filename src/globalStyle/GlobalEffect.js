@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+import {createGlobalStyle} from 'styled-components'
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+const GlobalStyle = createGlobalStyle`
 
-
-*,
-link {
+*, link {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,6 +13,8 @@ link {
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    max-width: 100vw;
 }
 
 input, textarea{
@@ -54,6 +54,18 @@ img {
     width: 100%;
 }
 
+.scrollTop {
+    position: absolute;
+    top: -1;
+    right: 0;
+    font-size: 6em;
+}
+
+.scrollTop :hover {
+    color: rgb(99, 56, 64);
+    transition: all 0.4s ease-out;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {}
 
@@ -68,3 +80,6 @@ img {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
+`
+
+export default GlobalStyle

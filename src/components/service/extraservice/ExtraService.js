@@ -1,5 +1,5 @@
 import React from "react";
-import "./extraservice.css";
+import ServiceOffer from "./ExtraserviceStyle"
 
 export default function ExtraService({ serviceOffer }) {
   const services = serviceOffer.map((offer) => (
@@ -12,7 +12,7 @@ export default function ExtraService({ serviceOffer }) {
   return (
     <div>
       <h2>What Services you will Get from me!</h2>
-      <div className="serviceOffer">{services}</div>
+      <ServiceOffer>{services}</ServiceOffer>
     </div>
   );
 }
