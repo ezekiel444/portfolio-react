@@ -18,17 +18,14 @@ const NavData = [
 
 
 const links = NavData.map((link) => (
-  <NavLink key={Math.random()} className="hoverEffect" to={`${link.path}`}>
+  <NavLink key={Math.random()} to={`${link.path}`}>
     <li className="nav-li">{link.nav}</li>
   </NavLink>
 ));
 
 const NavBar = () => {
-  const [navButton, setNavButton] = useState(false);
+  const [navClick, setNavClick] = useState(false)
 
-  const open = () => {
-    setNavButton((prevState) => (!prevState ? true : false));
-  };
 
   return (
     <Styles.NavHome>
@@ -40,14 +37,13 @@ const NavBar = () => {
       <Styles.NavSearch >
       <input placeholder="search" type="text" />
     </Styles.NavSearch>
-      {navButton ? (
-        <div className="nav-mobile">{links}</div>
-      ) : (
-        <div className="nav-computer">{links}</div>
-      )}
-      <span className="toggleNavBar" onClick={open}>
-        {navButton ? <FiX /> : <FiAlignLeft />}
-      </span>
+  <div>{links}</div>
+
+  <Styles.MobileLayout onClick={()=>setNavClick(open =>!open)}>
+  { [...Array(3)].map(()=>(<div></div>))}
+{ navClick ? <p>yes</p> : <p>no</p>}
+  </Styles.MobileLayout>
+  
     </Styles.NavHome>
   );
 };

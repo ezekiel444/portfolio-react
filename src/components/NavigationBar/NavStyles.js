@@ -11,54 +11,15 @@ const NavHome = styled.div`
     font-size: calc(0.75em + 1vmin);
 
     .nav-li {
-    padding: 1.4em;
-    display:inline-block
-    };
-
-    .toggleNavBar {
-    display: none
-}
-
-.nav-mobile {
-    display: none;
-    };
-
-.hoverEffect :hover {
-    color:white;
-    border-radius:50px;
+    padding: 0.5em;
+    margin:0.6em;
+    display:inline-block;
+    &:hover{
+   border-radius:50px;
    background-color:black;
-   text-align:center
+   text-align:center;
+   color:white;
 }
-
-
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 900px) {
-
-    .toggleNavBar {
-        display: block;
-        font-size: 5em;
-        position: relative;
-        top: 30px;
-    }
-
-    .nav-mobile {
-        display: block;
-        position: absolute;
-        top: 120px;
-        right: 0;
-        left: 50vw;
-        text-align: center;
-        background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-            linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-            linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-            linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-            linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-            linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-        background-color: #131313;
-        background-size: 20px 20px;
-    }
-
 }
 `
 
@@ -78,5 +39,42 @@ input{
 }
 `
 
+const MobileLayout = styled.div`
+color:red;
+display:none;
 
-export{NavHome, NavLogo, NavSearch}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 900px) {
+    background-color:black;
+    height:15vh;
+    width: 15vw;
+    display:block;
+    > div{
+        display:block;
+        height:15vh;
+        width: 15vw;
+        cursor:pointer
+    };
+   div:nth-child(1){
+       background-color:yellow;
+       height:20px;
+       transform:rotate(45deg) translate(30px, 25px)
+   }
+   div:nth-child(2){
+       background-color:green;
+       height:20px;
+       display:none
+   }
+   div:nth-child(3){
+       background-color:lightcyan;
+       height:20px;
+       transform:rotate(-45deg) translate(-9px, 15px)
+   }
+
+}
+
+`
+
+
+export{NavHome, NavLogo, NavSearch, MobileLayout}

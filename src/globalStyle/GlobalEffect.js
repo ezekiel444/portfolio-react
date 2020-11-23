@@ -2,6 +2,10 @@ import {createGlobalStyle} from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 
+link, button{
+   cursor: pointer;
+}
+
 *, link {
     margin: 0;
     padding: 0;
@@ -63,7 +67,7 @@ img {
 
 .scrollTop :hover {
     color: rgb(99, 56, 64);
-    transition: all 0.4s ease-out;
+    transition: all 0.1s ease-out;
 }
 
 /* Extra small devices (phones, 600px and down) */
