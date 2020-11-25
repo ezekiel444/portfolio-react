@@ -55,3 +55,35 @@ export default function Test() {
 //     const open = () => {
 //       setNavButton((prevState) => (!prevState ? true : false));
 //     };
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (max-width: 900px) {
+//     background-color:black;
+//     height:15vh;
+//     width: 15vw;
+//     display:block;
+//     > div{
+//         display:block;
+//         height:15vh;
+//         width: 15vw;
+//         cursor:pointer
+//     };
+//    div:nth-child(1){
+//        background-color:yellow;
+//        height:20px;
+//        transform:rotate(45deg) translate(30px, 25px)
+//    }
+//    div:nth-child(2){
+//        background-color:green;
+//        height:20px;
+//        display:none
+//    }
+//    div:nth-child(3){
+//        background-color:lightcyan;
+//        height:20px;
+//        transform:rotate(-45deg) translate(-9px, 15px)
+//    }
+// };

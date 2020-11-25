@@ -1,33 +1,17 @@
 import styled from 'styled-components'
 
-
-const NavHome = styled.div`
-    width: max(100px, 100%);
-    font-family: 'El Messiri', sans-serif;
-    background-color: ${(props=>props.theme.white)};
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: calc(0.75em + 1vmin);
-
-    .nav-li {
-    padding: 0.5em;
-    margin:0.6em;
-    display:inline-block;
-    &:hover{
-   border-radius:50px;
-   background-color:black;
-   text-align:center;
-   color:white;
-}
-}
-`
-
 const NavLogo = styled.div`
  width: 90px;
 `
 
 const NavSearch = styled.div`
+position: relative;
+.searchIcon{
+   position:absolute;
+   top:20px;
+   bottom: 0px;
+};
+
 input{
      border-radius: 25%;
      width: 5em;
@@ -39,42 +23,63 @@ input{
 }
 `
 
-const MobileLayout = styled.div`
-color:red;
-display:none;
 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+
+const NavHome = styled.div`
+    width: max(100px, 100%);
+    font-family: 'El Messiri', sans-serif;
+    background-color: ${(props=>props.theme.white)};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: calc(0.75em + 1vmin);
+    position: relative;
+
+    .nav-links {
+    color: #3A7ADE;
+    position:relative;
+    padding: 0.5em;
+    margin:0.6em;
+    display:inline-block;
+    &:hover{
+   border-radius:5px;
+   text-align:center;
+   color:palegoldenrod;
+}
+span{
+    position:absolute;
+    display:flex;
+    font-size:1.2rem;
+    font-weight:#DCDCDC;
+}
+
+};
+
+
+
+.mobilelayout{display:none}
+
 @media only screen and (max-width: 900px) {
-    background-color:black;
-    height:15vh;
-    width: 15vw;
-    display:block;
-    > div{
-        display:block;
-        height:15vh;
-        width: 15vw;
-        cursor:pointer
-    };
-   div:nth-child(1){
-       background-color:yellow;
-       height:20px;
-       transform:rotate(45deg) translate(30px, 25px)
-   }
-   div:nth-child(2){
-       background-color:green;
-       height:20px;
-       display:none
-   }
-   div:nth-child(3){
-       background-color:lightcyan;
-       height:20px;
-       transform:rotate(-45deg) translate(-9px, 15px)
-   }
+.windowlayout{display:none}
+
+.mobilelayout{
+display:block;
+.navPlaceHolder{position:relative};
+.formatDropDownView{
+    background-color:${(props=>props.theme.white)};
+    overflow-x:hidden;
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    right:10px;
+}
+}
 
 }
 
 `
 
 
-export{NavHome, NavLogo, NavSearch, MobileLayout}
+
+export{NavHome, NavLogo, NavSearch}
