@@ -19,7 +19,6 @@ h4 {
 }
 
 .footer-right {
-    height: 40%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -29,6 +28,12 @@ h4 {
 
    .label{
        display:flex;
+   }
+
+   .footer-icon{
+    display: flex;
+    flex-direction:column;
+  align-content: center;
    }
 `
 
