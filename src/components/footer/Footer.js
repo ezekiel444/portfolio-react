@@ -4,15 +4,16 @@ import FooterStyle from './FooterStyle'
 import { FiTarget, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 const socialLogo = [
-  { icon: FiTwitter , label: "Twitter"},
-  { icon: FiInstagram, label: "Instagram" },
-  { icon: FiLinkedin , label : "Linkedin" },
+  { icon: <FiTwitter/> , label: "Twitter"},
+  { icon: <FiInstagram/>, label: "Instagram" },
+  { icon: <FiLinkedin/> , label : "Linkedin" },
 ];
 
 const logos = socialLogo.map((logo) => (
- 
-  <Fragment   key={Math.random()}>
- <Link to="#"><div className="logoContainer"><logo.icon className="eachLogo"></logo.icon><span className="labelAttribute">{logo.label}</span></div> </Link>
+  <Fragment key={Math.random()}>
+ <Link to="#">
+<div>{logo.icon} <span className='label'>{logo.label}</span> </div>
+ </Link>
  </Fragment>
 ));
 
@@ -30,8 +31,8 @@ export default function Footer() {
       </div>
       <section className="footer-right">
         <p>
-          Copyright ©{new Date().getFullYear()} All rights reserved | By Ezekiel
-          Matomi Lucky.
+          Copyright ©{new Date().getFullYear()} All rights reserved | By <span>Ezekiel
+          Matomi Lucky</span>.
         </p>
         <div className="footer-icon">
           <h2>Stay Connected</h2>
