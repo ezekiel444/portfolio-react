@@ -16,6 +16,14 @@ const [error_message, setError_message]= useState("")
 const handleSubmit = (e)=>{
 e.preventDefault()
 console.log({inputField})
+
+for (let key in inputField){
+  if (inputField[key] ===''){
+    setError_message(`You must provide ${key}`)
+    return
+  }
+}
+setError_message("")
 }
 
 
@@ -63,8 +71,10 @@ setinputField(prev=>({...prev, [currentName]:currentValue}))
             value={inputField.message}
             onChange={handleInput}
           ></textarea>
+          {error_message && (<p>{error_message}</p>)}
           <button type="submit">Send Message</button>
           </form>
+  
         </div>
       </ContactStyle>
   );
