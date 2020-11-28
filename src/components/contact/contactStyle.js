@@ -36,12 +36,13 @@ button {
     border-radius: 30px;
     text-align: center;
     font-size: 1.5em;
+    resize:none
 }
 
 
 @media (max-width:900px) {
     .signature {
-        width: 10em;
+        width: 5em;
     }
 }
 

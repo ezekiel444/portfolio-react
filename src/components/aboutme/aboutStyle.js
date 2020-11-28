@@ -48,7 +48,7 @@ const AboutButton = styled.button`
     font-weight: bold;
     font-size: 1em;
     text-align:center;
-    background-color:${(props)=>props.color ? `${props.theme.black}` : `${props.theme.teal}`};
+    background-color:${(props)=>props.aboutcolor ? `${props.theme.black}` : `${props.theme.teal}`};
     color: ${(props)=>props.theme.white};
 `
    

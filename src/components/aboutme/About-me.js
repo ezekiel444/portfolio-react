@@ -19,7 +19,7 @@ const AboutMe = () => {
           numquam nulla est. Odio a nulla numquam? Quas, facilis ab.
         </p>
         <div className="learn-hire-button">
-          <AboutButton color>Learn</AboutButton >
+          <AboutButton aboutcolor>Learn</AboutButton >
           <AboutButton >Hire Me</AboutButton >
         </div>
       </div>

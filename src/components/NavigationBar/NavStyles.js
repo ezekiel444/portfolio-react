@@ -64,15 +64,15 @@ span{
 .windowlayout{display:none}
 
 .mobilelayout{
-display:block;
-.navPlaceHolder{position:relative};
-.formatDropDownView{
-    background-color:${(props=>props.theme.white)};
-    overflow-x:hidden;
-    display:flex;
-    flex-direction:column;
-    position:absolute;
-    right:10px;
+    display:block;
+    .navPlaceHolder{position:relative};
+        .formatDropDownView{
+        background-color:${(props=>props.theme.white)};
+        overflow-x:hidden;
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+        right:10px;
 }
 }
 
