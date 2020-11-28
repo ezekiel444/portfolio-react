@@ -4,17 +4,15 @@ import styled from "styled-components"
 const HomePage = styled.div`
  display: flex;
     flex-direction: row-reverse;
-    height: 100vh;
+    justify-content:space-between;
     background-color: #E5E4DF;
-    overflow: hidden;
 
+    .profile-img-container{width:50%}
 
-    .profile-img-container {
-    width: 90rem;
-    margin: 20px 0px 0px 0px
-}
+ 
 
 .about-my-profile {
+    width:50%;
     display: flex;
     flex-direction: column;
     padding: 8em 0 0 2em;
@@ -22,18 +20,12 @@ const HomePage = styled.div`
 }
 
 h3 {
-    font-size: 17px;
     font-family: system-ui;
     color: rgb(224, 102, 102)
 }
 
-h1 {
-    font-size: 50px;
-}
 
-.about-my-profile p {
-    line-height: 2;
-}
+
 
 
 .learn-hire-button {
@@ -43,10 +35,9 @@ h1 {
 
 const AboutButton = styled.button` 
     border-radius: 30%;
-    padding: 20px 40px;
+    padding: 10px 10px;
     margin: 30px 10px;
     font-weight: bold;
-    font-size: 1em;
     text-align:center;
     background-color:${(props)=>props.aboutcolor ? `${props.theme.black}` : `${props.theme.teal}`};
     color: ${(props)=>props.theme.white};

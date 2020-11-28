@@ -3,9 +3,9 @@ import ContactStyle from './contactStyle'
 import Signature from "../../image/signature.png";
 
 const initialForm = {
-name:'',
+fullname:'',
 email:'',
-gender:"",
+gender:'',
 message:''
 }
 
@@ -14,16 +14,15 @@ const [inputField, setinputField] = useState(initialForm)
 const [error_message, setError_message]= useState("")
 
 const handleSubmit = (e)=>{
- e.preventDefault()
- console.log(inputField)
+e.preventDefault()
+console.log({inputField})
 }
 
 
 const handleInput = (e)=>{
-const targerName = e.currentTarget.name
-const targetValue = e.currentTarget.value
-setinputField(prev=>({...prev, [targerName]:targetValue}))
-
+const currentName = e.currentTarget.name
+const currentValue = e.currentTarget.value
+setinputField(prev=>({...prev, [currentName]:currentValue}))
 }
 
   return (
@@ -42,18 +41,18 @@ setinputField(prev=>({...prev, [targerName]:targetValue}))
         </div>
         <div className="contact-message">
           <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Name</label>
-          <input placeholder="Fullname" type="text" value={inputField.name} onChange={handleInput} name="name" />
+          <label htmlFor="fullname">FullName</label>
+          <input placeholder="Fullname" type="text" value={inputField.fullname} name="fullname" onChange={handleInput} />
           <label htmlFor="email">Email</label>
-          <input placeholder="Email" name="email" value={inputField.email} onChange={handleInput} type="email" />
+          <input placeholder="Email" name="email" type="email" value={inputField.email} onChange={handleInput} />
         <fieldset>
           <legend>Gender</legend>
           <label> 
-            <input type="radio" name='gender' value='male' checked={inputField.gender==='male'} onChange={handleInput} />
+            <input type="radio" name='gender' value='male' checked={inputField.gender==='male'} onChange={handleInput}  />
             Male
           </label>
           <label>
-            <input type="radio" name='gender'  value='female' checked={inputField.gender==='female'} onChange={handleInput} />
+            <input type="radio" name='gender'  value='female' checked={inputField.gender ==='female'} onChange={handleInput}  />
             Female
           </label>
         </fieldset>

@@ -29,16 +29,15 @@ export default function Footer() {
         <h3>ezekielmatomi588@gmail.com</h3>
         <h4> Grenoble France</h4>
       </div>
-      <section className="footer-right">
+      <div className="footer-right">
         <p>
           Copyright ©{new Date().getFullYear()} All rights reserved | By <span>Ezekiel
           Matomi Lucky</span>.
         </p>
         <div className="footer-icon">
-          <h2>Stay Connected</h2>
          {logos}
         </div>
-      </section>
+      </div>
     </FooterStyle>
   );
 }

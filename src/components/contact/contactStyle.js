@@ -28,6 +28,12 @@ const ContactStyle = styled.section`
     height: 70vh;
 }
 
+form{
+    display:flex;
+    flex-direction:column;
+    justify-content:center}
+
+
 .contact-message input,
 textarea,
 button {

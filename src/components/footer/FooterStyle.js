@@ -19,21 +19,20 @@ h4 {
 }
 
 .footer-right {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-bottom: 60px;
-    span{color:green};
+    height:40vh;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:flex-end
+    
    }
 
-   .label{
-       display:flex;
-   }
 
-   .footer-icon{
-    display: flex;
-    flex-direction:column;
-  align-content: center;
+   .footer-icon{  
+    display:flex;
+    
+    justify-content:space-around;
+    span{color:rgb(58,122,222)}
    }
 `
 
