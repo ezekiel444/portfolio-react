@@ -9,7 +9,10 @@ const HomePage = styled.div`
 
     .profile-img-container{width:50%}
 
- 
+ @media only screen and (max-width: 900px) {
+     display:flex;
+     flex-direction:column
+ }
 
 .about-my-profile {
     width:50%;
@@ -24,14 +27,10 @@ h3 {
     color: rgb(224, 102, 102)
 }
 
-
-
-
-
 .learn-hire-button {
     display: flex;
 }
-`
+`;
 
 const AboutButton = styled.button` 
     border-radius: 30%;

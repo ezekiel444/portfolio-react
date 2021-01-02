@@ -8,17 +8,17 @@ import {
   TiArrowUpThick,
   AboutMe,
   HomePage,
+  Error,
 } from "./components/HomeOfComponents";
+
 import { Route, Switch } from "react-router-dom";
-
-
 
 
 
 function App() {
   return (
     <>
-      <GlobalFonts/>
+      <GlobalFonts />
       <header className="header-sticky">
         <NavBar />
       </header>
@@ -28,14 +28,9 @@ function App() {
         <Route path="/about" component={AboutMe} />
         <Route path="/service" component={Service} />
         <Route path="/contact" component={Contact} />
+        <Route path="*" component={Error} />
       </Switch>
-      <Footer />
-
-      {/* scroll-up arrow */}
-      <TiArrowUpThick
-        className="scrollTop"
-        onClick={() => window.scrollTo(0, 0)}
-      ></TiArrowUpThick>
+      <Footer TiArrowUpThick={TiArrowUpThick} />
     </>
   );
 }

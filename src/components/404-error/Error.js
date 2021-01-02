@@ -1,6 +1,14 @@
 import React from "react";
-import "./error.css";
+import { Link } from "react-router-dom";
 
 export default function Error() {
-  return <>error</>;
+  return (
+    <>
+      <div style={{ height: "40vh", textAlign: "center", marginTop: "50px" }}>
+        <Link className="btn" to="/">
+          Go to HomePage
+        </Link>
+      </div>
+    </>
+  );
 }
