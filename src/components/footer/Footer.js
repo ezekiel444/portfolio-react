@@ -25,7 +25,11 @@ export const socialLogo = [
 
 const logos = socialLogo.map(({ icon, medialAccount }) => (
   <Fragment key={Math.random()}>
-    <a target="_blank" href={`${medialAccount}`}>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href={`${medialAccount}`}
+      >
       <div>{icon}</div>
     </a>
   </Fragment>
