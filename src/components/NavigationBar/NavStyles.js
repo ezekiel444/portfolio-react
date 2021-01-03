@@ -30,11 +30,27 @@ const NavContainer = styled.div`
       height: 5rem;
       text-align: center;
       margin-right: 0.5rem;
+
+      .bounce {
+        animation: bounce 2s ease-in-out infinite;
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
     }
 
     .main-links-container {
-        height:0;
-        overflow: hidden;
+      height: 0;
+      overflow: hidden;
       transition: all 0.5s ease-in-out;
     }
 

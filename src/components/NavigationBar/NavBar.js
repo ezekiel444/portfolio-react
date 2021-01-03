@@ -58,7 +58,11 @@ navContainerRef.current.style.height = "0px";
       </div>
 
       <button className="toggleNav" onClick={() => setShowNav(!showNav)}>
-        {showNav ? <AiOutlineClose size="60" /> : <FaBars size="60" />}
+        {showNav ? (
+          <AiOutlineClose style={{color:'red'}} size="40" />
+        ) : (
+          <FaBars className="bounce" size="40" />
+        )}
       </button>
     </Styles.NavContainer>
   );

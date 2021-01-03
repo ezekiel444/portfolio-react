@@ -1,5 +1,4 @@
 import React,{Fragment}  from "react";
-import {Link} from "react-router-dom"
 import FooterStyle from './FooterStyle'
 import { FiTarget, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
@@ -26,9 +25,9 @@ export const socialLogo = [
 
 const logos = socialLogo.map(({ icon, medialAccount }) => (
   <Fragment key={Math.random()}>
-    <Link to={`${medialAccount}`}>
+    <a target="_blank" href={`${medialAccount}`}>
       <div>{icon}</div>
-    </Link>
+    </a>
   </Fragment>
 ));
 
