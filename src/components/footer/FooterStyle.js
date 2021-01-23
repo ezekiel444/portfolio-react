@@ -2,27 +2,20 @@ import styled from 'styled-components'
 
 
 const FooterStyle = styled.footer`
-  background: #0f0029;
-  color: #fff;
-
-  .container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items:center;
+  background: #0d6efd;
+  text-align: center;
+  padding: 3em 0;
+  p > a {
+    display: inline-block;
+    width: 60px;
+    height: 50px;
+    position: relative;
+    font-size: 22px;
+    margin: 0 10px;
+    text-align: center;
   }
-
-  section{
-      div{
-display:grid;
-grid-template-columns:repeat(4,7rem)
-      }
-  }
-
-  h4 {
-    opacity: 0.2;
-    font-style: italic;
+  p {
+    color: #fff;
   }
 `;
 

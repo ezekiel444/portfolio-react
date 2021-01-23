@@ -1,72 +1,65 @@
-import React, { useState, useRef, useEffect } from "react";
-import * as Styles from './NavStyles'
-import Logo from "../../image/eml-logo.png";
-import { NavLink } from "react-router-dom";
-import { FaBars } from 'react-icons/fa';
-import {AiOutlineClose} from 'react-icons/ai';
-import {IoIosHome} from 'react-icons/io';
-import { ImProfile } from "react-icons/im";
-import { GrServices } from "react-icons/gr";
-import { MdContactMail, MdPages } from "react-icons/md";
+import React, { useState } from "react";
+import { IoMdClose } from "react-icons/io";
+import {NavLink} from 'react-router-dom'
+import { portfolioData } from "../../data";
+import './nav.css'
 
 
 const NavData = [
-  { nav_name: "Home", path: "/", icon:<IoIosHome/> },
-  { nav_name: "About", path: "/about", icon: <ImProfile/> },
-  { nav_name: "Service", path: "/service", icon: <GrServices/> },
-  { nav_name: "Contact", path: "/contact", icon:<MdContactMail/> },
-  { nav_name: "Footer", path: "/footer",  icon:<MdPages/> },
+  { nav_name: "Home", path: "/" },
+  { nav_name: "About", path: "/about" },
+  { nav_name: "Service", path: "/service" },
+  { nav_name: "Contact", path: "/contact"},
+  { nav_name: "Footer", path: "/footer"},
 ];
 
 
-
 const NavBar = () => {
-  const [showNav, setShowNav] = useState(false)
-  const linksRef = useRef(null)
-  const navContainerRef = useRef(null)
-  
-useEffect(()=>{
-  const containerLinksRef = linksRef.current.getBoundingClientRect()
-  if(showNav){
-navContainerRef.current.style.height = `${containerLinksRef.height}px`;
-  }else{
-navContainerRef.current.style.height = "0px";
-  }
-
-},[showNav])
-
-  
+  const [isNavTrue, setNavTrue] = useState(false);
+ 
   return (
-    <Styles.NavContainer>
-      <NavLink to="/">
-        <div style={{ width: "90px" }}>
-          <img src={Logo} alt="nav logo" />
+    <nav className="navbar navbar-expand-sm sticky-top navbar-light bg-primary ">
+      <div className="container-fluid">
+        <NavLink className="navbar-brand" to="/">
+          <img src={portfolioData.logo} className="logo" alt="portfolio-logo" />
+        </NavLink>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onClick={() => setNavTrue(!isNavTrue)}
+          >
+          {isNavTrue ? (
+            <IoMdClose color="rgb(190, 22, 140)" size="32" />
+            ) : (
+            <span className="navbar-toggler-icon"></span>
+            )}
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
+            <img
+              className="mobilePix"
+              src={portfolioData.profilePic}
+              alt={portfolioData.name}
+            />
+
+            {NavData.map((link) => (
+              <li className="nav-item" key={Math.random()}>
+                <NavLink className="nav-link" to={`${link.path}`}>
+                  {link.nav_name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
         </div>
-      </NavLink>
-
-      <div ref={navContainerRef} className="main-links-container">
-        <ul ref={linksRef} className="links-container">
-          {NavData.map((link) => (
-            <li key={Math.random()}>
-              <NavLink to={`${link.path}`}>
-                <div>{link.icon}</div>
-                {link.nav_name}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
       </div>
-
-      <button className="toggleNav" onClick={() => setShowNav(!showNav)}>
-        {showNav ? (
-          <AiOutlineClose style={{color:'red'}} size="40" />
-        ) : (
-          <FaBars className="bounce" size="40" />
-        )}
-      </button>
-    </Styles.NavContainer>
+    </nav>
   );
+  
 };
 
 export default NavBar;
-

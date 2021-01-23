@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+
+:root{
+  --primary-main:#007BFF;
+  --primay-white: #fff;
+  --primary-orange:#f9ab00;
+  --primary-dark:#000000;
+  --primary-red:#ef4035;
+  --primary-hover-red:#f33501;
+}
+
+
+
+/* navbar */
+
+ .logo{
+  width: 4.25rem;
+}
+
+
+.navbar-nav{
+margin-left: auto;
+  text-align: center;
+  transition: all 3s ease-in-out;
+  }
+
+
+  
+/* profile picture */
+
+
+.mobilePix{
+  display: none;
+}
+
+@media(max-width:575px){
+  .mobilePix{
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+   line-height: 30px;
+    height: 80px;
+    width: 70px;
+    border-radius: 50%;
+  }
+}

@@ -1,36 +1,28 @@
 import React from "react";
-import GlobalFonts from './fonts/fonts';
-import {
-  NavBar,
-  Service,
-  Contact,
-  Footer,
-  TiArrowUpThick,
-  AboutMe,
-  HomePage,
-  Error,
-} from "./components/HomeOfComponents";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 import { Route, Switch } from "react-router-dom";
-
-
+import './App.css'
+import HomePage from './components/HomePage/Homepage'
+import NavBar from "./components/NavigationBar/NavBar";
+import Error from './components/404-error/Error'
+import Footer from './components/footer/Footer'
 
 function App() {
+
   return (
     <>
-      <GlobalFonts />
-      <header className="header-sticky">
-        <NavBar />
-      </header>
+      <NavBar />
+
       <hr />
       <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/about" component={AboutMe} />
-        <Route path="/service" component={Service} />
-        <Route path="/contact" component={Contact} />
+        <Route path="/" component={HomePage} />
+        <Route path="/" component={HomePage} />
+        <Route path="/" component={HomePage} />
         <Route path="*" component={Error} />
       </Switch>
-      <Footer TiArrowUpThick={TiArrowUpThick} />
+      <Footer/>
     </>
   );
 }

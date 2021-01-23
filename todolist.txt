@@ -1,0 +1,8 @@
+  {/* scroll-up arrow */}
+      {/* <TiArrowUpThick
+        className="btn"
+        onClick={() => window.scrollTo(0, 0)}
+      ></TiArrowUpThick> */}
+
+
+      features to implement later

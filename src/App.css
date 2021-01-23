@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+
+:root{
+  --primary-main:#007BFF;
+  --primay-white: #fff;
+  --primary-orange:#f9ab00;
+  --primary-dark:#000000;
+  --primary-red:#ef4035;
+  --primary-hover-red:#f33501;
+}
+
+
+body{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* general link button style */
+
+a,link{  
+border: 2px solid var(--primay-white);
+background-color: var(--primary-main);
+text-transform: uppercase;
+padding: .2rem;
+font-weight: 100;
+color: var(--primay-white) !important;
+margin: 0.5rem;
+border-top-left-radius: 20px;
+border-bottom-right-radius: 20px;
+text-decoration: none !important;
+}
+
+a:hover,link:hover:active,:focus {
+border-top: .15rem solid var(--primary-orange) !important
+}
+a:hover,link:hover{
+  border-bottom: .15rem solid var(--primary-orange) !important
+}
+
+/* all page resize on mobile */
+@media(max-width:576px){
+  p{
+    font-size: 1.2rem;
+  }
+}
+

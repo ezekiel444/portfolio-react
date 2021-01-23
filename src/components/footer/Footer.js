@@ -1,6 +1,6 @@
 import React,{Fragment}  from "react";
 import FooterStyle from './FooterStyle'
-import { FiTarget, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 
 export const socialLogo = [
@@ -30,7 +30,7 @@ const logos = socialLogo.map(({ icon, medialAccount }) => (
         rel="noopener noreferrer"
         href={`${medialAccount}`}
       >
-      <div>{icon}</div>
+      <span>{icon}</span>
     </a>
   </Fragment>
 ));
@@ -39,30 +39,13 @@ const logos = socialLogo.map(({ icon, medialAccount }) => (
 export default function Footer({ TiArrowUpThick }) {
 
   return (
-    <FooterStyle>
-      <div className="container">
-        <section>
-          <h2>
-            <FiTarget />
-            Portfolio
-          </h2>
-          <h3>ezekielmatomi588@gmail.com</h3>
-          <h4> Grenoble France</h4>
-        </section>
-
-        <section>
-          <div>{logos}</div>
-          <p>
-            Copyright ©{new Date().getFullYear()} All rights reserved | By{" "}
-            Ezekiel Matomi Lucky.
-          </p>
-        </section>
-      </div>
-      {/* scroll-up arrow */}
-      <TiArrowUpThick
-        className="btn"
-        onClick={() => window.scrollTo(0, 0)}
-      ></TiArrowUpThick>
+    <FooterStyle className="container-fluid">
+      <p>{logos}</p>
+      <p>
+        Copyright ©{new Date().getFullYear()} All rights reserved | By Ezekiel
+        Matomi Lucky.
+      </p>
+    
     </FooterStyle>
   );
 }
