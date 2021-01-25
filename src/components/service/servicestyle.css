@@ -1,0 +1,27 @@
+:root{
+  --primary-main:#007BFF;
+  --primay-white: #fff;
+  --primary-orange:#f9ab00;
+  --primary-dark:#000000;
+  --primary-red:#ef4035;
+  --primary-hover-red:#f33501;
+}
+
+.service-product{ 
+ /* display: flex; */
+  /* gap: 1rem; */
+  overflow-x: auto;
+  scroll-snap-type: x;
+}
+
+.service-product .service-item{
+ scroll-snap-align: center;
+ padding-top: 1rem;
+    flex: 0 0 150px;
+    width: 150px;
+    height: 150px;
+    background: var(--primary-main);
+border-top-left-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+

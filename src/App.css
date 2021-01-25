@@ -10,6 +10,10 @@
   --primary-hover-red:#f33501;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 
 body{
   font-family: 'Roboto Condensed', sans-serif;

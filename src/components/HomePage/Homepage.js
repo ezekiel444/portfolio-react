@@ -3,7 +3,7 @@ import Particles from "react-particles-js";
 import Typed from 'react-typed'
 import { portfolioData } from "../../data";
 import HomePageCss from './HomePage.module.css'
-import Btn from '../btn/Btn'
+import Btn from '../customButton/Btn'
 
 const HomePage = () => {
 
@@ -15,8 +15,7 @@ const HomePage = () => {
             <img src={portfolioData.profilePic} alt="beatiful profile picx" />
 
             <figcaption>
-              <Btn link="contact" text="contact" />
-              Matomi
+              <Btn link="contact" text="Contact" />
             </figcaption>
           </figure>
         </div>

@@ -4,10 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Route, Switch } from "react-router-dom";
 import './App.css'
-import HomePage from './components/HomePage/Homepage'
 import NavBar from "./components/NavigationBar/NavBar";
+import HomePage from './components/HomePage/Homepage'
+import Contact from './components/contact/Contact'
 import Error from './components/404-error/Error'
 import Footer from './components/footer/Footer'
+import Service from "./components/service/Service";
 
 function App() {
 
@@ -17,12 +19,12 @@ function App() {
 
       <hr />
       <Switch>
-        <Route path="/" component={HomePage} />
-        <Route path="/" component={HomePage} />
-        <Route path="/" component={HomePage} />
+        <Route exact path="/" component={HomePage} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/service" component={Service} />
         <Route path="*" component={Error} />
       </Switch>
-      <Footer/>
+      <Footer />
     </>
   );
 }

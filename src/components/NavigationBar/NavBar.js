@@ -7,10 +7,8 @@ import './nav.css'
 
 const NavData = [
   { nav_name: "Home", path: "/" },
-  { nav_name: "About", path: "/about" },
   { nav_name: "Service", path: "/service" },
-  { nav_name: "Contact", path: "/contact"},
-  { nav_name: "Footer", path: "/footer"},
+  { nav_name: "Contact", path: "/contact"}
 ];
 
 
