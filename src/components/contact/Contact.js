@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import ContactStyle from './contactStyle'
+import "./contactStyle.css";
 import Signature from "../../image/signature.png";
 
 const initialForm = {
@@ -34,48 +34,74 @@ setinputField(prev=>({...prev, [currentName]:currentValue}))
 }
 
   return (
-      <ContactStyle className="contactStyle">
-        <div className="contact-now">
+    <main className="container contact">
+      <section className="row">
+        {/* <ContactStyle className="contactStyle"> */}
+        {/* <div className="contact-now"> */}
+        <div className="col-sm-12 col-md-6 col-xl-6">
           <h2>If Not Now, When? Let’s Work Together!</h2>
           <br />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem,
-            mollitia earum.
-          </p>
+          <p>I deliver your business as fast as possible...</p>
           <br />
-          <div className="signature">
-            <img src={Signature} alt="sign" />
+        </div>
+        <div className="col-sm-12 col-md-6 col-xl-6">
+          <div className="contactMessage">
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="fullname">FullName</label>
+              <input
+                placeholder="Fullname"
+                type="text"
+                value={inputField.fullname}
+                name="fullname"
+                onChange={handleInput}
+              />
+              <label htmlFor="email">Email</label>
+              <input
+                placeholder="Email"
+                name="email"
+                type="email"
+                value={inputField.email}
+                onChange={handleInput}
+              />
+              <fieldset>
+                <legend>Gender</legend>
+                <label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="male"
+                    checked={inputField.gender === "male"}
+                    onChange={handleInput}
+                  />
+                  Male
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="female"
+                    checked={inputField.gender === "female"}
+                    onChange={handleInput}
+                  />
+                  Female
+                </label>
+              </fieldset>
+              <label htmlFor="message">Your Message</label>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                value={inputField.message}
+                onChange={handleInput}
+              ></textarea>
+              {error_message && <p>{error_message}</p>}
+              <button type="submit">Send Message</button>
+            </form>
+            <div className="signature">
+              <img src={Signature} alt="sign" />
+            </div>
           </div>
         </div>
-        <div className="contact-message">
-          <form onSubmit={handleSubmit}>
-          <label htmlFor="fullname">FullName</label>
-          <input placeholder="Fullname" type="text" value={inputField.fullname} name="fullname" onChange={handleInput} />
-          <label htmlFor="email">Email</label>
-          <input placeholder="Email" name="email" type="email" value={inputField.email} onChange={handleInput} />
-        <fieldset>
-          <legend>Gender</legend>
-          <label> 
-            <input type="radio" name='gender' value='male' checked={inputField.gender==='male'} onChange={handleInput}  />
-            Male
-          </label>
-          <label>
-            <input type="radio" name='gender'  value='female' checked={inputField.gender ==='female'} onChange={handleInput}  />
-            Female
-          </label>
-        </fieldset>
-        <label htmlFor='message'>Your Message</label>
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={inputField.message}
-            onChange={handleInput}
-          ></textarea>
-          {error_message && (<p>{error_message}</p>)}
-          <button type="submit">Send Message</button>
-          </form>
-  
-        </div>
-      </ContactStyle>
+      </section>
+    </main>
   );
 }

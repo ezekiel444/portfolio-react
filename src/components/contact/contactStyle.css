@@ -1,0 +1,105 @@
+/* import styled from 'styled-components'
+
+// const ContactStyle = styled.section`
+//     display: flex;
+//     height: 70vh;
+
+// .contact-now {
+//     width: 50%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+// }
+
+// .contact-now h1 {
+//     color: rgb(39, 37, 37);
+//     padding: 15px;
+// }
+
+// .signature {
+//     width: 16em;
+// }
+
+// .contactMessage {
+//     display: flex;
+//     flex-direction: column;
+//     text-align: center;
+//     width: 50%;
+//     height: 70vh;
+// }
+
+// form{
+//     display:flex;
+//     flex-direction:column;
+//     justify-content:center}
+
+
+// .contactMessage input,
+// textarea,
+// button {
+//     margin-top: auto;
+//     height: 50px;
+//     border-radius: 30px;
+//     text-align: center;
+//     font-size: 1.5em;
+//     resize:none
+// }
+
+
+// @media (max-width:900px) {
+//     .signature {
+//         width: 5em;
+//     }
+// }
+
+// ` */
+.contact{
+    position: relative;
+}
+
+
+  .contactMessage {
+      /* background:orange; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contactMessage input,
+  textarea,
+  button {
+    margin-top: auto;
+    height: 50px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 1rem;
+    resize: none;
+  }
+
+  .signature{
+    position: absolute;
+    top: 16.5rem;
+    left: -5rem;
+  }
+
+
+  @media(max-width:575px){
+  .signature{
+    position: unset;
+    max-width: 200px;
+   margin-left: 5rem;
+    /* bottom: 20rem;
+    z-index: 1; */
+  }
+  .signature img{
+    width: 100%;
+  }
+}
+
+/* export default contactCss; */
