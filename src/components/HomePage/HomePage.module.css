@@ -70,3 +70,8 @@ figcaption {
   display: flex !important;
   flex-direction: row-reverse;
 }
+
+.moreInfo a{
+background: var(--primary-main);
+font-size: 1.2rem;
+}

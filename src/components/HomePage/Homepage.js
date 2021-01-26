@@ -4,6 +4,7 @@ import Typed from 'react-typed'
 import { portfolioData } from "../../data";
 import HomePageCss from './HomePage.module.css'
 import Btn from '../customButton/Btn'
+import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
 
@@ -22,17 +23,19 @@ const HomePage = () => {
         <div className="col-sm-12 col-md-6 col-xl-6">
           <h3>GET EVERY SIGLE SOLUTION</h3>
           <h1>
-            I'm Designer <br /> Ezekiel Matomi Lucky
+            Hi, I'm <br /> Ezekiel Matomi Lucky
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quidem
-            laborum tenetur non officia cumque, aut fugiat in voluptatibus enim
-            numquam nulla est. Odio a nulla numquam? Quas, facilis ab.
+            I am a Software developer and tech enthusiast versed with a lot of
+            programming languages and tools. I share knowledge about Web
+            programming, mostly HTML, CSS, Javascript, React Hooks, Node Js,
+            GraphQL and PostgreSQL/MongoDB with various folks. I also mentor at
+            Codeyourfuture South Africa group 2021. Looking forward to connect
+            with great minds across the globe.
           </p>
-          <div className="learn-hire-button">
-            <div>Learn</div>
-            <div>Hire Me</div>
-          </div>
+          <aside className={HomePageCss.moreInfo}>
+            <NavLink to="/">Know more about me</NavLink>
+          </aside>
         </div>
 
         <section className={HomePageCss.particlesControl}>

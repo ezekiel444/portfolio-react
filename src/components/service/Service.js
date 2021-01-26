@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import './servicestyle.css'
 
 const serviceOffer = [
@@ -26,9 +27,8 @@ function Service() {
               <div>
                 <h2>Designing With Passion While Exploring The World.</h2>
                 <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing eveniet,
-                  adipisci unde qui odit dolore, modi velit inventore soluta.
-                  Saepe, beatae.
+                  Here are some of my projects i did for fun. PS. I spent most
+                  of my leisure time creating or developing random projects 😍
                 </p>
               </div>
             </section>
@@ -37,6 +37,8 @@ function Service() {
               <section>
                 <h2>Any Type Of Query & Discussion.</h2>
                 <h3>Late talk with me</h3>
+                <NavLink to="/contact">Lets work </NavLink>
+
                 <span>
                   {/* hire@ezekielmatomi588@gmail.com <MdArrowForward /> */}
                 </span>
@@ -49,12 +51,12 @@ function Service() {
             <section className="col-sm-12 col-md-6 col-xl-6 mx-auto text-center">
               <h2>Some of my projects.</h2>
               <div className="d-flex justify-content-center gap-5 service-product">
-                {serviceOffer.map(({title,icon,details,id}) => {
+                {serviceOffer.map(({ title, icon, details, id }) => {
                   return (
                     <div className="service-item" key={id}>
                       <h3>{title}</h3>
                       <div>{icon}</div>
-                      <p>{details}</p> 
+                      <p>{details}</p>
                     </div>
                   );
                 })}
