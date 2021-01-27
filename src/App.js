@@ -10,12 +10,16 @@ import Contact from './components/contact/Contact'
 import Error from './components/404-error/Error'
 import Footer from './components/footer/Footer'
 import Service from "./components/service/Service";
-
+// require();
 function App() {
 
   return (
     <>
       <NavBar />
+      
+      {/* <a download href="./asserts/En_CV_EZEKIEL_MATOMI_LUCKY.pdf">
+        test download
+      </a> */}
 
       <hr />
       <Switch>

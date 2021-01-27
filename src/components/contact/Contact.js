@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import "./contactStyle.css";
-import Signature from "../../image/signature.png";
+import Signature from "../../asserts/signature.png";
 import { motion } from "framer-motion";
 
 const initialForm = {
@@ -37,8 +37,6 @@ setinputField(prev=>({...prev, [currentName]:currentValue}))
   return (
     <main className="container contact">
       <section className="row">
-        {/* <ContactStyle className="contactStyle"> */}
-        {/* <div className="contact-now"> */}
         <motion.div
           className="col-sm-12 col-md-6 col-xl-6"
           initial={{ x: "100vw" }}

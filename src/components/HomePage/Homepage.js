@@ -3,7 +3,6 @@ import Particles from "react-particles-js";
 import Typed from 'react-typed'
 import { portfolioData } from "../../data";
 import HomePageCss from './HomePage.module.css'
-import Btn from '../customButton/Btn'
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -21,14 +20,28 @@ const HomePage = () => {
             <img src={portfolioData.profilePic} alt="beatiful profile picx" />
 
             <figcaption>
-              <Btn link="contact" text="Contact" />
+              <a
+                href="https://drive.google.com/file/d/1TlDNvdcE_OFzKHm1-Vr4djMf2eh8eJYA/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Cv Fr
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1nl-kwG3bXs2R3UFRtspSN5jTQvN0uWM3/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Cv En
+              </a>
+              <a href="tel:+33753432920" rel="noopener noreferrer">Direct Call</a>
             </figcaption>
           </motion.figure>
         </div>
         <motion.div
           className="col-sm-12 col-md-6 col-xl-6"
           initial={{ x: "-100vw" }}
-          animate={{ x: 0}}
+          animate={{ x: 0 }}
           transition={{ duration: 1.4 }}
         >
           <h3>GET EVERY SIGLE SOLUTION</h3>
