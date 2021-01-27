@@ -65,6 +65,11 @@ const NavBar = () => {
                 initial={{ x: "100vw" }}
                 animate={{ x: 0, type: "spring", stiffness: 2000 }}
                 transition={{ duration: 1.4 }}
+                whileHover={{
+               
+                  textShadow: "0px 0px 8px rgb(255,255,255)",
+                  boxShadow: "0px 0px 8px rgb(255,255,255)",
+                }}
               >
                 <NavLink className="nav-link" to={`${link.path}`}>
                   {link.nav_name}
