@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import './servicestyle.css'
@@ -23,16 +24,28 @@ function Service() {
       <>
         <main className="container">
           <aside className="row">
-            <section className="col-sm-12 col-md-6 col-xl-6">
-              <div>
+            <section
+              className="col-sm-12 col-md-6 col-xl-6"
+             
+            >
+              <motion.div
+              initial={{x:-100}}
+              animate={{x:0}}
+              transition={{duration:1.2}}
+              >
                 <h2>Designing With Passion While Exploring The World.</h2>
                 <p>
                   Here are some of my projects i did for fun. PS. I spent most
                   of my leisure time creating or developing random projects 😍
                 </p>
-              </div>
+              </motion.div>
             </section>
-            <div className="col-sm-12 col-md-6 col-xl-6">
+            <motion.div
+              className="col-sm-12 col-md-6 col-xl-6"
+              initial={{ x: "100vw" }}
+              animate={{ x: 0 }}
+              transition={{ duration: 1.4 }}
+            >
               {" "}
               <section>
                 <h2>Any Type Of Query & Discussion.</h2>
@@ -43,10 +56,15 @@ function Service() {
                   {/* hire@ezekielmatomi588@gmail.com <MdArrowForward /> */}
                 </span>
               </section>
-            </div>
+            </motion.div>
           </aside>
         </main>
-        <div className="container-fluid">
+        <motion.div
+          className="container-fluid"
+          initial={{ y: "-100vh" }}
+          animate={{ y: 0 }}
+          transition={{ duration: 1.4 }}
+        >
           <article className="row">
             <section className="col-sm-12 col-md-6 col-xl-6 mx-auto text-center">
               <h2>Some of my projects.</h2>
@@ -63,7 +81,7 @@ function Service() {
               </div>
             </section>
           </article>
-        </div>
+        </motion.div>
       </>
     );
 }

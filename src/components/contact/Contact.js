@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import "./contactStyle.css";
 import Signature from "../../image/signature.png";
+import { motion } from "framer-motion";
 
 const initialForm = {
 fullname:'',
@@ -38,15 +39,25 @@ setinputField(prev=>({...prev, [currentName]:currentValue}))
       <section className="row">
         {/* <ContactStyle className="contactStyle"> */}
         {/* <div className="contact-now"> */}
-        <div className="col-sm-12 col-md-6 col-xl-6">
+        <motion.div
+          className="col-sm-12 col-md-6 col-xl-6"
+          initial={{ x: "100vw" }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1.4 }}
+        >
           <h2>If Not Now, When? Let’s Work Together!</h2>
           <br />
           <p>I deliver your business as fast as possible...</p>
           <br />
-        </div>
+        </motion.div>
         <div className="col-sm-12 col-md-6 col-xl-6">
           <div className="contactMessage">
-            <form onSubmit={handleSubmit}>
+            <motion.form
+              onSubmit={handleSubmit}
+              initial={{ x: "-100vw" }}
+              animate={{ x: 0 }}
+              transition={{ duration: 1.4 }}
+            >
               <label htmlFor="fullname">FullName</label>
               <input
                 placeholder="Fullname"
@@ -95,10 +106,15 @@ setinputField(prev=>({...prev, [currentName]:currentValue}))
               ></textarea>
               {error_message && <p>{error_message}</p>}
               <button type="submit">Send Message</button>
-            </form>
-            <div className="signature">
+            </motion.form>
+            <motion.div
+              className="signature"
+              initial={{ y: "100vh" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.5 }}
+            >
               <img src={Signature} alt="sign" />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

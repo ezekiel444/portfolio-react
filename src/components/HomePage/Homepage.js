@@ -5,6 +5,7 @@ import { portfolioData } from "../../data";
 import HomePageCss from './HomePage.module.css'
 import Btn from '../customButton/Btn'
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const HomePage = () => {
 
@@ -12,15 +13,24 @@ const HomePage = () => {
     <main className={`container ${HomePageCss.container}`}>
       <div className={`row ${HomePageCss.flipRow}`}>
         <div className="col-sm-12 col-md-6 col-xl-6">
-          <figure>
+          <motion.figure
+            initial={{ x: "100vw" }}
+            animate={{ x: 0 }}
+            transition={{ duration: 1.4 }}
+          >
             <img src={portfolioData.profilePic} alt="beatiful profile picx" />
 
             <figcaption>
               <Btn link="contact" text="Contact" />
             </figcaption>
-          </figure>
+          </motion.figure>
         </div>
-        <div className="col-sm-12 col-md-6 col-xl-6">
+        <motion.div
+          className="col-sm-12 col-md-6 col-xl-6"
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0}}
+          transition={{ duration: 1.4 }}
+        >
           <h3>GET EVERY SIGLE SOLUTION</h3>
           <h1>
             Hi, I'm <br /> Ezekiel Matomi Lucky
@@ -36,7 +46,7 @@ const HomePage = () => {
           <aside className={HomePageCss.moreInfo}>
             <NavLink to="/">Know more about me</NavLink>
           </aside>
-        </div>
+        </motion.div>
 
         <section className={HomePageCss.particlesControl}>
           <Typed

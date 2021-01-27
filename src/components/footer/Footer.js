@@ -2,6 +2,7 @@ import React,{Fragment}  from "react";
 import FooterStyle from './FooterStyle'
 import { FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export const socialLogo = [
   {
@@ -25,13 +26,16 @@ export const socialLogo = [
 
 const logos = socialLogo.map(({ icon, medialAccount }) => (
   <Fragment key={Math.random()}>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href={`${medialAccount}`}
-      >
+    <motion.a
+      target="_blank"
+      rel="noopener noreferrer"
+      href={`${medialAccount}`}
+      initial={{ y: "100vh" }}
+      animate={{ y: 0 }}
+      transition={{ duration: 1.4 }}
+    >
       <span>{icon}</span>
-    </a>
+    </motion.a>
   </Fragment>
 ));
 
@@ -39,13 +43,15 @@ const logos = socialLogo.map(({ icon, medialAccount }) => (
 export default function Footer({ TiArrowUpThick }) {
 
   return (
-    <FooterStyle className="container-fluid">
+    <FooterStyle
+      className="container-fluid"
+      
+    >
       <p>{logos}</p>
       <p>
         Copyright ©{new Date().getFullYear()} All rights reserved | By Ezekiel
         Matomi Lucky.
       </p>
-    
     </FooterStyle>
   );
 }
